@@ -1,0 +1,70 @@
+@use "sass:math";
+
+a {
+	color: var(--text-color);
+}
+
+:root {
+	--container-width: 1200px;
+	--container-padding: 15px;
+
+	--font-main: 'Poppins', sans-serif;
+	--font-accent: 'Playfair Display', serif;
+
+	--page-bg: #fff;
+	--text-color: #000;
+	--accent: #ac182c;
+
+    --laptop-size: 1199px;
+	--tablet-size: 959px;
+	--mobile-size: 599px;
+}
+
+.dark {
+    --page-bg: #252526;
+    --text-color: #fff;
+}
+
+:root {
+	--black: #171718;
+	--black-border: #171718;
+	--white: #fff;
+	--purple: #5C62EC;
+
+	--text-color: var(--black)
+  
+	--dark-bg: var(--black);
+	--dark-border: var(--dark-border);
+	--header-text: var(--white);
+	--accent: var(--purple);
+  }
+//
+
+@mixin trans {
+	transition: color 0.3s ease 0s;
+}
+
+
+//TO %
+@function prc ($pxOne, $pxTwo) {
+	$result: math.div($pxOne, $pxTwo) * 100%;
+	@return $result;
+}
+//REM
+@function rem ($px) {
+	$result: math.div($px, 16);
+	@return $result + rem;
+}
+//EM
+@function em ($px) {
+	$result: math.div($px, 16);
+	@return $result;
+}
+
+//line-height
+
+@function size ($fz, $lh) {
+	$result: math.div($fz, $lh);
+	@return $result;
+}
+

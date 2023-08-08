@@ -1,0 +1,178 @@
+/* Base */
+@import "./base/reset";
+@import "./base/vars";
+@import "./base/base";
+@import "./base/utils";
+@import "./base/containers";
+@import "./base/sticky-footer";
+
+/* Blocks */
+@import "./blocks/*.scss";
+
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap');
+
+// font-family: 'DM Sans', sans-serif;
+// font-family: 'Poppins', sans-serif;
+
+.none {
+	display: none !important;
+}
+
+:root {
+	--black: #171718;
+	--black-border: #26292D;
+	--white: #fff;
+	--purple: #5C62EC;
+  
+    --text-color: var(--black)
+	--dark-bg: var(--black);
+	--dark-border: var(--black-border);
+	--header-text: var(--white);
+	--accent: var(--purple);
+  }
+
+html, body {
+    font-family: 'DM Sans', sans-serif;
+    letter-spacing: -0.5px;
+    color: var(--text-color);
+}
+
+//*General*//
+
+.section {
+	padding: 70px 0;
+}
+
+.tittle-1 {
+	margin-bottom: 60px;
+	font-size: 60px;
+	font-weight: 700;
+	text-align: center;
+	color: var(--accent);
+}
+
+//*Projects*//
+
+@function size2($fz, $lh) {
+	$result: $fz / $lh * 100%;
+	@return $result;
+  }
+
+.projects {
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 30px;
+	row-gap: 30px;
+
+}
+.project {
+	max-width: 370px;
+	background-color: var(--white);
+	box-shadow: 0px 5px 35px rgba(0, 0, 0, 0.25);
+	border-radius: 10px;
+
+		// .project__img
+
+		&__img {
+			border-radius: 10px;
+		}
+
+		// .project__title
+
+		&__title {
+			padding: 15px 20px 25px;
+			font-size: 24px;
+			font-weight: 700;
+			line-height: 130%;
+			color: var(--text-color);
+		}
+}
+
+
+//Page 2
+
+//*project details*//
+
+.section {
+
+	// .section__project-details
+
+	&__project-details {
+	}
+}
+
+.project-details {
+
+	// .project-details__tittle-1
+
+	&__tittle-1 {
+	}
+
+	// .project-details__cover
+
+	&__cover {
+	}
+
+	// .project-details__desc
+
+	&__desc {
+	}
+}
+
+.desc {
+
+	// .desc__skils
+
+	&__skils {
+	}
+}
+
+.btn-outline {
+}
+
+
+
+// .section {
+
+// 	// .section__wrapper
+
+// 	&__wrapper {
+// 		display: flex;
+// 		flex-direction: column;
+// 		align-items: center;
+// 	}
+// }
+// .container {
+// }
+// .wrapper {
+
+// 	// .wrapper__tittle-1
+
+// 	&__title-1 {
+		
+// 	}
+
+// 	// .wrapper__skils
+
+// 	&__skils {
+// 		padding: 40px 30px;
+// 		font-weight: 700;
+// 		font-size: 24px;
+// 		line-height: size(31.2px, 24);
+// 	}
+
+// 	// .wrapper__git
+
+// 	&__git {
+// 	}
+// }
+// .git {
+// 	display: flex;
+
+// 	// .git__text
+
+// 	&__text {
+// 	}
+// }
+
